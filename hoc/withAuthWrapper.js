@@ -1,15 +1,14 @@
 /* eslint-disable react/prop-types */
-import { useState, useContext, useEffect } from 'react';
-import Router from 'next/router';
-import { Alert, AlertTitle } from '@material-ui/lab';
-import MainLayout from '../layouts/main';
-import { AuthContext } from '../contexts/auth';
-import { redirectIfAuthenticated } from '../lib/session';
-import { FirebaseContext } from '../contexts/firebase';
+import { useState, useContext, useEffect } from "react";
+import Router from "next/router";
+import { Alert, AlertTitle } from "@material-ui/lab";
+import { AuthContext } from "../contexts/auth";
+import { redirectIfAuthenticated } from "../lib/session";
+import { FirebaseContext } from "../contexts/firebase";
 
 export const withAuthWrapper = (Component) => (props) => {
   const [loading, setLoading] = useState(false);
-  const [errorMessage, setErrorMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState("");
   const { activateAuth } = useContext(AuthContext);
   const firebase = useContext(FirebaseContext);
 
@@ -19,7 +18,7 @@ export const withAuthWrapper = (Component) => (props) => {
 
   if (errorMessage) {
     setTimeout(() => {
-      setErrorMessage('');
+      setErrorMessage("");
     }, 5000);
   }
 
@@ -30,7 +29,7 @@ export const withAuthWrapper = (Component) => (props) => {
       if (!idToken) idToken = user.uid;
       activateAuth(user, idToken);
       setLoading(false);
-      Router.push('/');
+      Router.push("/quiz/sologuitar");
     } catch (error) {
       console.log({ error });
     }
@@ -63,7 +62,7 @@ export const withAuthWrapper = (Component) => (props) => {
   };
 
   return (
-    <MainLayout>
+    <>
       <div className="container">
         <div className="main">
           {errorMessage && (
@@ -91,6 +90,6 @@ export const withAuthWrapper = (Component) => (props) => {
           }
         `}
       </style>
-    </MainLayout>
+    </>
   );
 };

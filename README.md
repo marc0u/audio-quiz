@@ -1,6 +1,3 @@
-## [HolaMundo](https://www.youtube.com/watch?v=jaxjtywrG2A) TODO App Challenge
-
-## [Review!! 🙋🏻‍♂️ min: 29:34](https://youtu.be/fyjNpvtzVhk?t=1774) 
 ## Demo
 [Open Demo](https://nextjs-todo-list.vercel.app
 )

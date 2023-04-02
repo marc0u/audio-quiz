@@ -69,7 +69,7 @@ const Header = ({ user, firebase, onLogout }) => {
             <img width="40px" src="/logopng.png" className={classes.logo} alt="todo list logo" />
             <Link href="/">
               <Typography variant="h6" className={classes.title}>
-                Next.js Todo List
+                Audio Quiz
               </Typography>
             </Link>
           </>

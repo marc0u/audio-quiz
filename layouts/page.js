@@ -7,7 +7,7 @@ const Page = ({ children }) => (
     <style jsx>
       {`
         .main {
-          min-height: 100vh;
+          max-height: 100vh;
         }
 
         .main :global(> div) {

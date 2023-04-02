@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
-import MainLayout from '../layouts/main';
-import { withUser } from '../hoc/withUser';
-import UserNotLogged from '../components/UserNotLogged';
-import HomeContainer from '../containers/HomeContainer';
+import MainLayout from '../../layouts/main';
+import { withUser } from '../../hoc/withUser';
+import UserNotLogged from '../../components/UserNotLogged';
+import HomeContainer from '../../containers/HomeContainer';
 
 const Home = ({ user }) => {
   return (

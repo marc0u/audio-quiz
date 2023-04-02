@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Header from './header';
 import BaseLayout from './base';
 import Page from './page';
-import Footer from './footer';
 import { AuthContext } from '../contexts/auth';
 
 const MainLayout = ({ children }) => {
@@ -13,7 +12,6 @@ const MainLayout = ({ children }) => {
       <div id="app-container">
         <Header user={user} onLogout={removeAuth} />
         <Page>{children}</Page>
-        <Footer />
       </div>
     </BaseLayout>
   );

@@ -6,7 +6,7 @@ const BaseLayout = ({ children }) => {
   return (
     <div>
       <Head>
-        <title>Next.js TODO List APP by Junior Garcia | Challenge</title>
+        <title>Audio Quiz</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" />
         <link
